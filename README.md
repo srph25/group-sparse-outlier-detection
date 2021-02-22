@@ -1,6 +1,7 @@
 # Robust Detection of Anomalies via Sparse Methods
 ## Python source code for reproducing the experiments described in the paper
-[Paper](https://argmax.ai/pdfs/brml/MilLudLorSma2015.pdf)\
+[Paper (.pdf)](https://argmax.ai/pdfs/brml/MilLudLorSma2015.pdf)\
+\
 Code is mostly self-explanatory via file, variable and function names; but more complex lines are commented.\
 Designed to require minimal setup overhead.\
 Note: as the Baxter Robot Arm data set from the paper is closed source, I am releasing very similar artificially generated data here.
@@ -28,6 +29,19 @@ python3.7 -m IPython run_toy.py
 results/ : experimental results will be saved to this directory with numpy\
 run_toy.py : conduct experiment on the artificially generated piecewise linear toy data set\
 outlier_gflasso: our group sparsity based outlier detection method implemented in CVXPY.
+
+
+### Citation:
+```latex
+@inproceedings{milacski2015robust,
+  title={Robust detection of anomalies via sparse methods},
+  author={Milacski, Zolt{\'a}n {\'A} and Ludersdorfer, Marvin and L{\H{o}}rincz, Andr{\'a}s and van der Smagt, Patrick},
+  booktitle={International Conference on Neural Information Processing},
+  pages={419--426},
+  year={2015},
+  organization={Springer}
+}
+```
 
 
 ### Contact:
