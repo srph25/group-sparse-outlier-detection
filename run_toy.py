@@ -14,7 +14,7 @@ np.random.seed(1234)
 m = 50 # series
 n = 500 # time steps
 d = 3 # features
-p = 5 # steps
+s = 5 # steps
 o = 10 # outliers
 powers_lmbd = list(range(-10, 14, 2))
 powers_mu = list(range(-10, 14, 2))
@@ -98,9 +98,10 @@ if __name__ == "__main__":
         base_file_name = ('series_' + str(q))
 
         x = np.arange(n)
-        idx = np.random.choice(n - 1, p - 1)
+        idx = np.random.choice(n - 1, s - 1)
+        print(idx)
         diff = np.zeros((n - 1, d))
-        diff[idx, :] = np.random.randn(p - 1, d)
+        diff[idx, :] = np.random.randn(s - 1, d)
         init = np.random.randn(d)
         X = np.concatenate([init[None, :], init[None, :] + np.cumsum(diff, axis=0)], axis=0)
         X = np.cumsum(X, axis=0)
